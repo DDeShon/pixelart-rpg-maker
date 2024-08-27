@@ -7,4 +7,6 @@ const GAME_HEIGHT = TILE_SIZE * ROWS;
 window.addEventListener("load", function () {
   const canvas = document.getElementById("canvas1");
   const ctx = canvas.getContext("2d");
+  canvas.width = GAME_WIDTH;
+  canvas.height = GAME_HEIGHT;
 });
