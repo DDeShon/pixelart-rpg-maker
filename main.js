@@ -13,4 +13,5 @@ window.addEventListener("load", function () {
   function drawGrid() {
     ctx.fillRect(10, 20, 50, 100);
   }
+  drawGrid();
 });
