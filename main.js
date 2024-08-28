@@ -11,7 +11,11 @@ window.addEventListener("load", function () {
   canvas.height = GAME_HEIGHT;
 
   function drawGrid() {
-    ctx.fillRect(10, 20, 50, 100);
+    for (let row = 0; row < ROWS; row++) {
+      for (let col = 0; col < COLS; col++) {
+        ctx.strokeRect(0 * TILE_SIZE, 0 * TILE_SIZE, TILE_SIZE, TILE_SIZE);
+      }
+    }
   }
   drawGrid();
 });
