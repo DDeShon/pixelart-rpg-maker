@@ -1,3 +1,5 @@
+import { World } from "./scripts/world.js";
+
 export const TILE_SIZE = 32;
 export const COLS = 15;
 export const ROWS = 20;
@@ -9,4 +11,7 @@ window.addEventListener("load", function () {
   const ctx = canvas.getContext("2d");
   canvas.width = GAME_WIDTH;
   canvas.height = GAME_HEIGHT;
+
+  const world = new World();
+  world.drawGrid();
 });
