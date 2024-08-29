@@ -13,5 +13,5 @@ window.addEventListener("load", function () {
   canvas.height = GAME_HEIGHT;
 
   const world = new World();
-  world.drawGrid();
+  world.drawGrid(ctx);
 });
