@@ -3,7 +3,7 @@ import { TILE_SIZE } from "../main.js";
 export class GameObject {
   constructor({ game, sprite, position, scale }) {
     this.game = game;
-    this.sprite = sprite ?? { x, y, width, height, image };
+    this.sprite = sprite ?? { x: 0, y: 0, width, height, image };
     this.position = position;
     this.scale = scale;
   }
