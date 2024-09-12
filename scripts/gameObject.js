@@ -8,7 +8,7 @@ export class GameObject {
       y: 0,
       width: TILE_SIZE,
       height: TILE_SIZE,
-      image,
+      image: "",
     };
     this.position = position;
     this.scale = scale;
