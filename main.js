@@ -16,6 +16,8 @@ window.addEventListener("load", function () {
   const world = new World();
   world.drawGrid(ctx);
 
-  const hero = new Hero({});
+  const hero = new Hero({
+    position: { x: 100, y: 200 },
+  });
   hero.draw(ctx);
 });
