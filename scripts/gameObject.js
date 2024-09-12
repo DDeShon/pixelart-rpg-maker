@@ -10,7 +10,7 @@ export class GameObject {
       height: TILE_SIZE,
       image: "",
     };
-    this.position = position;
+    this.position = position ?? { x: 0, y: 0 };
     this.scale = scale;
   }
 
