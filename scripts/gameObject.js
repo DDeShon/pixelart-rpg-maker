@@ -11,7 +11,7 @@ export class GameObject {
       image: "",
     };
     this.position = position ?? { x: 0, y: 0 };
-    this.scale = scale;
+    this.scale = scale ?? 1;
   }
 
   draw(ctx) {
