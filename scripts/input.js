@@ -21,7 +21,11 @@ export class Input {
     });
   }
 
-  keyPressed() {}
+  keyPressed(key) {
+    if (this.keys.indexOf(key) === -1) {
+      this.keys.unshift(key);
+    }
+  }
 
   keyReleased() {}
 }
