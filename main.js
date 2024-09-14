@@ -1,4 +1,5 @@
 import { Hero } from "./scripts/hero.js";
+import { Input } from "./scripts/input.js";
 import { World } from "./scripts/world.js";
 
 export const TILE_SIZE = 32;
@@ -20,4 +21,6 @@ window.addEventListener("load", function () {
     position: { x: 2, y: 2 },
   });
   hero.draw(ctx);
+
+  const input = new Input();
 });
