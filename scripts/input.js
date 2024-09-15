@@ -14,9 +14,12 @@ export class Input {
         this.keyPressed(DOWN);
       }
     });
+
     window.addEventListener("keyup", (e) => {
       if (e.key === "ArrowUp" || e.key.toLowerCase() === "w") {
         this.keyReleased(UP);
+      } else if (e.key === "ArrowDown" || e.key.toLowerCase() === "s") {
+        this.keyReleased(DOWN);
       }
     });
   }
