@@ -29,6 +29,7 @@ export class Input {
   keyReleased(key) {
     const index = this.keys.indexOf(key);
     this.keys.splice(index, 1);
+    console.log(key);
   }
 
   keyReleased() {}
