@@ -12,6 +12,8 @@ export class Input {
         this.keyPressed(UP);
       } else if (e.key === "ArrowDown" || e.key.toLowerCase() === "s") {
         this.keyPressed(DOWN);
+      } else if (e.key === "ArrowLeft" || e.key.toLowerCase() === "a") {
+        this.keyPressed(LEFT);
       }
     });
 
