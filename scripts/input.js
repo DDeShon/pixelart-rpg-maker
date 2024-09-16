@@ -15,7 +15,8 @@ export class Input {
         this.keyPressed(DOWN);
       } else if (e.key === "ArrowLeft" || e.key.toLowerCase() === "a") {
         this.keyPressed(LEFT);
-      }
+      } else if (e.key === "ArrowRight" || e.key.toLowerCase() === "d") {
+        this.keyPressed(RIGHT);
     });
 
     window.addEventListener("keyup", (e) => {
@@ -25,7 +26,8 @@ export class Input {
         this.keyReleased(DOWN);
       } else if (e.key === "ArrowLeft" || e.key.toLowerCase() === "a") {
         this.keyReleased(LEFT);
-      }
+      } else if (e.key === "ArrowRight" || e.key.toLowerCase() === "d") {
+        this.keyReleased(RIGHT);
     });
   }
 
