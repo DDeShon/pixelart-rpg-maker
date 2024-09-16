@@ -6,6 +6,7 @@ const DOWN = "DOWN";
 export class Input {
   constructor() {
     this.keys = [];
+    console.log(this.keys);
 
     window.addEventListener("keydown", (e) => {
       if (e.key === "ArrowUp" || e.key.toLowerCase() === "w") {
@@ -22,6 +23,8 @@ export class Input {
         this.keyReleased(UP);
       } else if (e.key === "ArrowDown" || e.key.toLowerCase() === "s") {
         this.keyReleased(DOWN);
+      } else if (e.key === "ArrowLeft" || e.key.toLowerCase() === "a") {
+        this.keyReleased(LEFT);
       }
     });
   }
@@ -36,7 +39,7 @@ export class Input {
   keyReleased(key) {
     const index = this.keys.indexOf(key);
     this.keys.splice(index, 1);
-    console.log(key, this.keys);
+    console.log(this.keys);
   }
 
   keyReleased() {}
