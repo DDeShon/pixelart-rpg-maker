@@ -44,7 +44,7 @@ export class Input {
     const index = this.keys.indexOf(key);
     if (index === -1) return;
     this.keys.splice(index, 1);
-    console.log(this.keys);
+    console.log(key, this.keys);
   }
 
   keyReleased() {}
