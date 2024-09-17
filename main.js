@@ -23,8 +23,10 @@ window.addEventListener("load", function () {
       this.input = new Input();
     }
     render() {
-      world.drawGrid(ctx);
-      hero.draw(ctx);
+      this.world.drawGrid(ctx);
+      this.hero.draw(ctx);
     }
   }
+  const game = new Game();
+  game.render(ctx);
 });
