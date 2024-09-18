@@ -28,5 +28,9 @@ window.addEventListener("load", function () {
     }
   }
   const game = new Game();
-  game.render(ctx);
+
+  function animate() {
+    requestAnimationFrame(animate);
+    game.render(ctx);
+  }
 });
