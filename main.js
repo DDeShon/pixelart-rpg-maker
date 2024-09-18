@@ -32,5 +32,7 @@ window.addEventListener("load", function () {
   function animate() {
     requestAnimationFrame(animate);
     game.render(ctx);
+    console.log("animating");
   }
+  this.requestAnimationFrame(animate);
 });
