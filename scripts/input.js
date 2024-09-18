@@ -1,7 +1,7 @@
-const LEFT = "LEFT";
-const RIGHT = "RIGHT";
-const UP = "UP";
-const DOWN = "DOWN";
+export const LEFT = "LEFT";
+export const RIGHT = "RIGHT";
+export const UP = "UP";
+export const DOWN = "DOWN";
 
 export class Input {
   constructor() {
@@ -37,7 +37,6 @@ export class Input {
     if (this.keys.indexOf(key) === -1) {
       this.keys.unshift(key);
     }
-    console.log(key);
   }
 
   keyReleased(key) {
