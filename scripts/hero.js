@@ -1,5 +1,5 @@
 import { GameObject } from "./gameObject.js";
-import { UP } from "./input.js";
+import { DOWN, LEFT, RIGHT, UP } from "./input.js";
 
 export class Hero extends GameObject {
   constructor({ game, sprite, position, scale }) {
