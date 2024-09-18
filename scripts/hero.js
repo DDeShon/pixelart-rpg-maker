@@ -7,7 +7,6 @@ export class Hero extends GameObject {
   }
   update() {
     if (this.game.input.lastKey === UP) {
-      console.log("hero moving UP");
       this.position.y--;
     } else if (this.game.input.lastKey === DOWN) {
       this.position.y++;
