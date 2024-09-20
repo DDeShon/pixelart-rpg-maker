@@ -2,7 +2,10 @@ import { COLS, ROWS, TILE_SIZE } from "../main.js";
 
 export class World {
   constructor() {
-    this.level1 = {};
+    this.level1 = {
+      waterLayer: [],
+      groundLayer: [],
+    };
   }
   drawGrid(ctx) {
     for (let row = 0; row < ROWS; row++) {
