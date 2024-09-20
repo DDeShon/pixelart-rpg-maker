@@ -25,6 +25,7 @@ window.addEventListener("load", function () {
     }
     render(ctx) {
       this.hero.update();
+      this.world.drawBackground(ctx);
       this.world.drawGrid(ctx);
       this.hero.draw(ctx);
     }
