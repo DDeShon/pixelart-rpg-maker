@@ -5,8 +5,14 @@ export class World {
     this.level1 = {
       waterLayer: [],
       groundLayer: [],
+      backgroundLayer: document.getElementById("backgroundLevel1"),
     };
   }
+
+  drawBackground(ctx) {
+    ctx.drawImage(this.level1.backgroundLayer, 0, 0);
+  }
+
   drawGrid(ctx) {
     for (let row = 0; row < ROWS; row++) {
       for (let col = 0; col < COLS; col++) {
