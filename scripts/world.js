@@ -12,6 +12,9 @@ export class World {
 
   drawBackground(ctx) {
     ctx.drawImage(this.level1.backgroundLayer, 0, 0);
+  }
+
+  drawForeground(ctx) {
     ctx.drawImage(this.level1.foregroundLayer, 0, 0);
   }
 
