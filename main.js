@@ -28,6 +28,7 @@ window.addEventListener("load", function () {
       this.world.drawBackground(ctx);
       this.world.drawGrid(ctx);
       this.hero.draw(ctx);
+      this.world.drawForeground(ctx);
     }
   }
   const game = new Game();
