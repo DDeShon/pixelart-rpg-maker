@@ -6,11 +6,13 @@ export class World {
       waterLayer: [],
       groundLayer: [],
       backgroundLayer: document.getElementById("backgroundLevel1"),
+      foregroundLayer: document.getElementById("foregroundLevel1"),
     };
   }
 
   drawBackground(ctx) {
     ctx.drawImage(this.level1.backgroundLayer, 0, 0);
+    ctx.drawImage(this.level1.foregroundLayer, 0, 0);
   }
 
   drawGrid(ctx) {
