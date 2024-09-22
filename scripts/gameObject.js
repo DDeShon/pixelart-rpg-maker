@@ -12,6 +12,9 @@ export class GameObject {
     };
     this.position = position ?? { x: 0, y: 0 };
     this.scale = scale ?? 1;
+
+    this.destinationPosition = { x: this.position.x, y: this.position.y };
+    this.distanceToTravel = { x: 0, y: 0 };
   }
 
   draw(ctx) {
