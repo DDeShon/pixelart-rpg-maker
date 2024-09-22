@@ -32,6 +32,8 @@ export class GameObject {
       // else take a step towards destination
       const stepX = this.distanceToTravel.x / distance;
       const stepY = this.distanceToTravel.y / distance;
+      this.position.x += stepX * speed;
+      this.position.y += stepY * speed;
     }
   }
 
