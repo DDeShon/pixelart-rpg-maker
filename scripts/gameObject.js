@@ -17,7 +17,23 @@ export class GameObject {
     this.distanceToTravel = { x: 0, y: 0 };
   }
 
-  moveTowards(destinationPosition, speed) {}
+  moveTowards(destinationPosition, speed) {
+    this.distanceToTravel.x = destinationPosition.x - this.position.x;
+    this.distanceToTravel.y = destinationPosition.y - this.position.y;
+
+    // let distance = Math.sqrt(this.distanceToTravel.x ** 2 + this.distanceToTravel.y ** 2);
+    let distance = Math.hypot(this.distanceToTravel.x, this.distanceToTravel.y);
+
+    if (distance <= speed) {
+      // if close enough, snap to position
+      this.position.x = destinationPosition.x;
+      this.position.y = destinationPosition.y;
+    } else {
+      // else take a step towards destination
+      const stepX = this.distanceToTravel.x / distance;
+      const stepY = this.distanceToTravel.y / distance;
+    }
+  }
 
   draw(ctx) {
     ctx.fillRect(
