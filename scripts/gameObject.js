@@ -17,6 +17,8 @@ export class GameObject {
     this.distanceToTravel = { x: 0, y: 0 };
   }
 
+  moveTowards(destinationPosition, speed) {}
+
   draw(ctx) {
     ctx.fillRect(
       this.position.x * TILE_SIZE,
