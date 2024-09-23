@@ -43,11 +43,6 @@ export class GameObject {
   }
 
   draw(ctx) {
-    ctx.fillRect(
-      this.position.x * TILE_SIZE,
-      this.position.y * TILE_SIZE,
-      TILE_SIZE,
-      TILE_SIZE
-    );
+    ctx.fillRect(this.position.x, this.position.y, TILE_SIZE, TILE_SIZE);
   }
 }

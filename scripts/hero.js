@@ -1,3 +1,4 @@
+import { TILE_SIZE } from "../main.js";
 import { GameObject } from "./gameObject.js";
 import { DOWN, LEFT, RIGHT, UP } from "./input.js";
 
@@ -15,14 +16,16 @@ export class Hero extends GameObject {
 
     if (arrived) {
       if (this.game.input.lastKey === UP) {
-        this.position.y--;
+        nextY -= TILE_SIZE;
       } else if (this.game.input.lastKey === DOWN) {
-        this.position.y++;
+        nextY += TILE_SIZE;
       } else if (this.game.input.lastKey === LEFT) {
-        this.position.x--;
+        nextX -= TILE_SIZE;
       } else if (this.game.input.lastKey === RIGHT) {
-        this.position.x++;
+        nextX += TILE_SIZE;
       }
+      this.destinationPosition.x = nextX;
+      this.destinationPosition.y = nextY;
     }
   }
 }
