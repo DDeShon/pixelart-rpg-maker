@@ -11,6 +11,7 @@ export class Hero extends GameObject {
     let nextY = this.destinationPosition.y;
 
     const distance = this.moveTowards(this.destinationPosition, this.speed);
+    const arrived = distance <= this.speed;
 
     if (this.game.input.lastKey === UP) {
       this.position.y--;
