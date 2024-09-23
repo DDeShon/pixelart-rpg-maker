@@ -38,7 +38,9 @@ export class GameObject {
       // remaining distance
       this.distanceToTravel.x = destinationPosition.x - this.position.x;
       this.distanceToTravel.y = destinationPosition.y - this.position.y;
+      distance = Math.hypot(this.distanceToTravel.x, this.distanceToTravel.y);
     }
+    return distance;
   }
 
   draw(ctx) {
