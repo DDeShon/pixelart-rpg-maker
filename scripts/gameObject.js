@@ -4,11 +4,11 @@ export class GameObject {
   constructor({ game, sprite, position, scale }) {
     this.game = game;
     this.sprite = sprite ?? {
+      image: "",
       x: 0,
       y: 0,
       width: TILE_SIZE,
       height: TILE_SIZE,
-      image: "",
     };
     this.position = position ?? { x: 0, y: 0 };
     this.scale = scale ?? 1;
