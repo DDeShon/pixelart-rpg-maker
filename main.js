@@ -19,6 +19,13 @@ window.addEventListener("load", function () {
       this.world = new World();
       this.hero = new Hero({
         game: this,
+        sprite: {
+          image: "",
+          x: 0,
+          y: 0,
+          width: TILE_SIZE,
+          height: TILE_SIZE,
+        },
         position: { x: 1 * TILE_SIZE, y: 2 * TILE_SIZE },
       });
       this.input = new Input();
