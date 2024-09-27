@@ -56,8 +56,8 @@ export class GameObject {
       this.sprite.height,
       this.position.x,
       this.position.y,
-      TILE_SIZE,
-      TILE_SIZE
+      this.width,
+      this.height
     );
   }
 }
