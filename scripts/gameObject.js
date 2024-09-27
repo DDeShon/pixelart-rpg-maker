@@ -45,6 +45,16 @@ export class GameObject {
   draw(ctx) {
     ctx.fillStyle = "blue";
     ctx.fillRect(this.position.x, this.position.y, TILE_SIZE, TILE_SIZE);
-    ctx.drawImage(this.sprite.image, this.position.x, this.position.y);
+    ctx.drawImage(
+      this.sprite.image,
+      this.sprite.x,
+      this.sprite.y,
+      this.sprite.width,
+      this.sprite.height,
+      this.position.x,
+      this.position.y,
+      TILE_SIZE,
+      TILE_SIZE
+    );
   }
 }
