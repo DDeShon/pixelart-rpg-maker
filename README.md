@@ -1,1 +1,1 @@
-This project will be used as part of a process to create a pixel rpg game.
+This project will be used as part of a process to create a pixel rpg game. There are new concepts that are being explored for the code 
