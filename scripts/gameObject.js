@@ -49,7 +49,12 @@ export class GameObject {
     ctx.fillStyle = "blue";
     ctx.fillRect(this.position.x, this.position.y, TILE_SIZE, TILE_SIZE);
     ctx.strokeStyle = "yellow";
-    ctx.strokeRect(this.position.x, this.position.y, TILE_SIZE, TILE_SIZE);
+    ctx.strokeRect(
+      this.destinationPosition.x,
+      this.destinationPosition.y,
+      TILE_SIZE,
+      TILE_SIZE
+    );
     ctx.drawImage(
       this.sprite.image,
       this.sprite.x,
