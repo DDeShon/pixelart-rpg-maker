@@ -61,7 +61,7 @@ export class GameObject {
       this.sprite.y,
       this.sprite.width,
       this.sprite.height,
-      this.position.x,
+      this.position.x + TILE_SIZE / 2 - this.width / 2,
       this.position.y,
       this.width,
       this.height
