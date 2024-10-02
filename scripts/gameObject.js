@@ -1,4 +1,4 @@
-import { TILE_SIZE } from "../main.js";
+import { HALF_TILE, TILE_SIZE } from "../main.js";
 
 export class GameObject {
   constructor({ game, sprite, position, scale }) {
@@ -61,7 +61,7 @@ export class GameObject {
       this.sprite.y,
       this.sprite.width,
       this.sprite.height,
-      this.position.x + TILE_SIZE / 2 - this.width / 2,
+      this.position.x + HALF_TILE - this.width / 2,
       this.position.y,
       this.width,
       this.height
