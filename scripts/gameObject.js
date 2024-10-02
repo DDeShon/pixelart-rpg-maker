@@ -17,6 +17,7 @@ export class GameObject {
     this.distanceToTravel = { x: 0, y: 0 };
 
     this.width = this.sprite.width * this.scale;
+    this.halfWidth = this.width / 2;
     this.height = this.sprite.height * this.scale;
   }
 
@@ -61,7 +62,7 @@ export class GameObject {
       this.sprite.y,
       this.sprite.width,
       this.sprite.height,
-      this.position.x + HALF_TILE - this.width / 2,
+      this.position.x + HALF_TILE - this.halfWidth,
       this.position.y,
       this.width,
       this.height
