@@ -7,6 +7,7 @@ export const COLS = 15;
 export const ROWS = 20;
 const GAME_WIDTH = TILE_SIZE * COLS;
 const GAME_HEIGHT = TILE_SIZE * ROWS;
+export const HALF_TILE = TILE_SIZE / 2;
 
 window.addEventListener("load", function () {
   const canvas = document.getElementById("canvas1");
