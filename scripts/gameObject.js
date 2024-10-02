@@ -19,6 +19,7 @@ export class GameObject {
     this.width = this.sprite.width * this.scale;
     this.halfWidth = this.width / 2;
     this.height = this.sprite.height * this.scale;
+    this.halfHeight = this.height / 2;
   }
 
   moveTowards(destinationPosition, speed) {
@@ -63,7 +64,7 @@ export class GameObject {
       this.sprite.width,
       this.sprite.height,
       this.position.x + HALF_TILE - this.halfWidth,
-      this.position.y,
+      this.position.y + HALF_TILE - this.halfHeight,
       this.width,
       this.height
     );
