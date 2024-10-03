@@ -17,6 +17,7 @@ export class Hero extends GameObject {
     if (arrived) {
       if (this.game.input.lastKey === UP) {
         nextY -= TILE_SIZE;
+        this.sprite.y = 8;
       } else if (this.game.input.lastKey === DOWN) {
         nextY += TILE_SIZE;
       } else if (this.game.input.lastKey === LEFT) {
