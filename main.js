@@ -23,7 +23,7 @@ window.addEventListener("load", function () {
         sprite: {
           image: document.getElementById("hero1"),
           x: 0,
-          y: 0,
+          y: 11,
           width: 64,
           height: 64,
         },
