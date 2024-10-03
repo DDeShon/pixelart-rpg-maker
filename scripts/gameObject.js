@@ -59,7 +59,7 @@ export class GameObject {
     ctx.drawImage(
       this.sprite.image,
       this.sprite.x,
-      this.sprite.y,
+      this.sprite.y * this.sprite.height,
       this.sprite.width,
       this.sprite.height,
       this.position.x + HALF_TILE - this.halfWidth,
