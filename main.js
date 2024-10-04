@@ -41,9 +41,13 @@ window.addEventListener("load", function () {
   }
   const game = new Game();
 
-  function animate() {
+  let lastTime = 0;
+  function animate(timeStamp) {
     requestAnimationFrame(animate);
-    // ctx.clearRect(0, 0, GAME_WIDTH, GAME_HEIGHT);
+
+    const deltaTime = timeStamp - lastTime;
+    lastTime = timeStamp;
+
     game.render(ctx);
   }
   this.requestAnimationFrame(animate);
