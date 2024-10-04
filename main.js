@@ -33,7 +33,7 @@ window.addEventListener("load", function () {
 
       this.eventUpdate = false;
       this.eventTimer = 0;
-      this.eventInterval = 200;
+      this.eventInterval = 100;
     }
     render(ctx, deltaTime) {
       this.hero.update();
