@@ -30,6 +30,10 @@ window.addEventListener("load", function () {
         position: { x: 1 * TILE_SIZE, y: 2 * TILE_SIZE },
       });
       this.input = new Input();
+
+      this.eventUpdate = false;
+      this.eventTimer = 0;
+      this.eventInterval = 200;
     }
     render(ctx) {
       this.hero.update();
@@ -48,7 +52,7 @@ window.addEventListener("load", function () {
     const deltaTime = timeStamp - lastTime;
     lastTime = timeStamp;
 
-    game.render(ctx);
+    game.render(ctx, deltaTime);
   }
   this.requestAnimationFrame(animate);
 });
