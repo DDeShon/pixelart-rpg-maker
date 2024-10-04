@@ -33,6 +33,8 @@ export class Hero extends GameObject {
       this.destinationPosition.y = nextY;
     }
 
-    this.sprite.x < this.maxFrame ? this.sprite.x++ : (this.sprite.x = 0);
+    if (this.game.eventUpdate) {
+      this.sprite.x < this.maxFrame ? this.sprite.x++ : (this.sprite.x = 0);
+    }
   }
 }

@@ -35,7 +35,7 @@ window.addEventListener("load", function () {
       this.eventTimer = 0;
       this.eventInterval = 200;
     }
-    render(ctx) {
+    render(ctx, deltaTime) {
       this.hero.update();
 
       this.world.drawBackground(ctx);
