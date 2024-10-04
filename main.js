@@ -37,10 +37,19 @@ window.addEventListener("load", function () {
     }
     render(ctx) {
       this.hero.update();
+
       this.world.drawBackground(ctx);
       this.world.drawGrid(ctx);
       this.hero.draw(ctx);
       this.world.drawForeground(ctx);
+
+      if (this.eventTimer < this.eventInterval) {
+        this.eventTimer += deltaTime;
+        this.eventUpdate = false;
+      } else {
+        this.eventTimer = 0;
+        this.eventUpdate = true;
+      }
     }
   }
   const game = new Game();
