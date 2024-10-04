@@ -6,6 +6,7 @@ export class Hero extends GameObject {
   constructor({ game, sprite, position, scale }) {
     super({ game, sprite, position, scale });
     this.speed = 2;
+    this.maxFrame = 8;
   }
   update() {
     let nextX = this.destinationPosition.x;
