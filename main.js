@@ -33,7 +33,7 @@ window.addEventListener("load", function () {
 
       this.eventUpdate = false;
       this.eventTimer = 0;
-      this.eventInterval = 100;
+      this.eventInterval = 120;
     }
     render(ctx, deltaTime) {
       this.hero.update();
@@ -47,7 +47,7 @@ window.addEventListener("load", function () {
         this.eventTimer += deltaTime;
         this.eventUpdate = false;
       } else {
-        this.eventTimer = 0;
+        this.eventTimer = this.eventInterval % this.eventTimer;
         this.eventUpdate = true;
       }
     }
