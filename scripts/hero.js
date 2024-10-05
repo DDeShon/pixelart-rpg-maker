@@ -41,7 +41,7 @@ export class Hero extends GameObject {
     }
 
     if (this.game.eventUpdate && this.moving) {
-      this.sprite.x < this.maxFrame ? this.sprite.x++ : (this.sprite.x = 0);
+      this.sprite.x < this.maxFrame ? this.sprite.x++ : (this.sprite.x = 1);
     }
   }
 }
