@@ -7,6 +7,7 @@ export class Hero extends GameObject {
     super({ game, sprite, position, scale });
     this.speed = 2;
     this.maxFrame = 8;
+    this.moving = false;
   }
   update() {
     let nextX = this.destinationPosition.x;
@@ -33,7 +34,7 @@ export class Hero extends GameObject {
       this.destinationPosition.y = nextY;
     }
 
-    if (this.game.eventUpdate) {
+    if (this.game.eventUpdate && this.moving) {
       this.sprite.x < this.maxFrame ? this.sprite.x++ : (this.sprite.x = 0);
     }
   }
