@@ -9,9 +9,11 @@ export class Hero extends GameObject {
     this.maxFrame = 8;
     this.moving = false;
   }
-  update() {
+  update(deltaTime) {
     let nextX = this.destinationPosition.x;
     let nextY = this.destinationPosition.y;
+
+    const scaledSpeed = this.speed * deltaTime;
 
     const distance = this.moveTowards(this.destinationPosition, this.speed);
     const arrived = distance <= this.speed;
