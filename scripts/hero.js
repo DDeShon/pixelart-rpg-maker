@@ -13,7 +13,7 @@ export class Hero extends GameObject {
     let nextX = this.destinationPosition.x;
     let nextY = this.destinationPosition.y;
 
-    const scaledSpeed = this.speed * deltaTime;
+    const scaledSpeed = this.speed * (deltaTime / 1000);
 
     const distance = this.moveTowards(this.destinationPosition, this.speed);
     const arrived = distance <= this.speed;
