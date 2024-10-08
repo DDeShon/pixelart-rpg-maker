@@ -15,8 +15,8 @@ export class Hero extends GameObject {
 
     const scaledSpeed = this.speed * (deltaTime / 1000);
 
-    const distance = this.moveTowards(this.destinationPosition, this.speed);
-    const arrived = distance <= this.speed;
+    const distance = this.moveTowards(this.destinationPosition, scaledSpeed);
+    const arrived = distance <= scaledSpeed;
 
     if (arrived) {
       if (this.game.input.lastKey === UP) {
