@@ -5,7 +5,7 @@ import { DOWN, LEFT, RIGHT, UP } from "./input.js";
 export class Hero extends GameObject {
   constructor({ game, sprite, position, scale }) {
     super({ game, sprite, position, scale });
-    this.speed = 2;
+    this.speed = 100;
     this.maxFrame = 8;
     this.moving = false;
   }
