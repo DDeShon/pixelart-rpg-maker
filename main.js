@@ -28,7 +28,7 @@ window.addEventListener("load", function () {
           height: 64,
         },
         position: { x: 1 * TILE_SIZE, y: 2 * TILE_SIZE },
-        scale: 2,
+        scale: 1,
       });
       this.input = new Input();
 
