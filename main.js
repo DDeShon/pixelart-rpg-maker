@@ -43,6 +43,7 @@ window.addEventListener("load", function () {
       this.world.drawGrid(ctx);
       this.hero.draw(ctx);
       this.world.drawForeground(ctx);
+      this.world.drawCollisionMap(ctx);
 
       if (this.eventTimer < this.eventInterval) {
         this.eventTimer += deltaTime;
