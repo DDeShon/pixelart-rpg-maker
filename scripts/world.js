@@ -26,7 +26,7 @@ export class World {
   }
 
   getTile(array, row, col) {
-    return array[COLS * row];
+    return array[COLS * row + col];
   }
 
   drawBackground(ctx) {
@@ -35,6 +35,15 @@ export class World {
 
   drawForeground(ctx) {
     ctx.drawImage(this.level1.foregroundLayer, 0, 0);
+  }
+
+  drawCollisionMap(ctx) {
+    ctx.strokeStyle = "orangered";
+    for (let row = 0; row < ROWS; row++) {
+      for (let col = 0; col < COLS; col++) {
+        ctx.fillRect(col * TILE_SIZE, row * TILE_SIZE, TILE_SIZE, TILE_SIZE);
+      }
+    }
   }
 
   drawGrid(ctx) {
