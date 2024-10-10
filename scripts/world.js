@@ -5,6 +5,7 @@ export class World {
     this.level1 = {
       waterLayer: [],
       groundLayer: [],
+      collisionLayer: [],
       backgroundLayer: document.getElementById("backgroundLevel1"),
       foregroundLayer: document.getElementById("foregroundLevel1"),
     };
