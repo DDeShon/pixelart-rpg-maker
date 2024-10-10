@@ -25,6 +25,10 @@ export class World {
     };
   }
 
+  getTile(array, row, col) {
+    return array[COLS * row];
+  }
+
   drawBackground(ctx) {
     ctx.drawImage(this.level1.backgroundLayer, 0, 0);
   }
