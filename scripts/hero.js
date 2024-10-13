@@ -32,6 +32,8 @@ export class Hero extends GameObject {
         nextX += TILE_SIZE;
         this.sprite.y = 11;
       }
+      const col = nextX / TILE_SIZE;
+      const row = nextY / TILE_SIZE;
       this.destinationPosition.x = nextX;
       this.destinationPosition.y = nextY;
     }
