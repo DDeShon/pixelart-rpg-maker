@@ -4,7 +4,7 @@ export const UP = "UP";
 export const DOWN = "DOWN";
 
 export class Input {
-  constructor() {
+  constructor(game) {
     this.keys = [];
     console.log(this.keys);
 
@@ -17,6 +17,8 @@ export class Input {
         this.keyPressed(LEFT);
       } else if (e.key === "ArrowRight" || e.key.toLowerCase() === "d") {
         this.keyPressed(RIGHT);
+      } else if (e.key === "Enter" || e.key === " ") {
+        this.game.toggleDebug();
       }
     });
 
