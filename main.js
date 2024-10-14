@@ -30,7 +30,7 @@ window.addEventListener("load", function () {
         position: { x: 1 * TILE_SIZE, y: 2 * TILE_SIZE },
         scale: 1,
       });
-      this.input = new Input();
+      this.input = new Input(this);
 
       this.eventUpdate = false;
       this.eventTimer = 0;
@@ -47,7 +47,7 @@ window.addEventListener("load", function () {
       this.hero.update(deltaTime);
 
       this.world.drawBackground(ctx);
-      this.world.drawGrid(ctx);
+      if (this.debug) this.world.drawGrid(ctx);
       this.hero.draw(ctx);
       this.world.drawForeground(ctx);
       this.world.drawCollisionMap(ctx);
