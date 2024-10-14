@@ -7,7 +7,6 @@ export class Input {
   constructor(game) {
     this.game = game;
     this.keys = [];
-    console.log(this.keys);
 
     window.addEventListener("keydown", (e) => {
       if (e.key === "ArrowUp" || e.key.toLowerCase() === "w") {
