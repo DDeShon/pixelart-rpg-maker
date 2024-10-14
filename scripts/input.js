@@ -5,6 +5,7 @@ export const DOWN = "DOWN";
 
 export class Input {
   constructor(game) {
+    this.game = game;
     this.keys = [];
     console.log(this.keys);
 
