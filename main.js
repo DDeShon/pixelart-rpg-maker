@@ -38,6 +38,11 @@ window.addEventListener("load", function () {
 
       this.debug = false;
     }
+
+    toggleDebug() {
+      this.debug = !this.debug;
+    }
+
     render(ctx, deltaTime) {
       this.hero.update(deltaTime);
 
