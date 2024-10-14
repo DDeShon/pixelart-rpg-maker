@@ -35,6 +35,8 @@ window.addEventListener("load", function () {
       this.eventUpdate = false;
       this.eventTimer = 0;
       this.eventInterval = 120;
+
+      this.debug = false;
     }
     render(ctx, deltaTime) {
       this.hero.update(deltaTime);
