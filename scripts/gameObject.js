@@ -47,6 +47,7 @@ export class GameObject {
   }
 
   draw(ctx) {
+    if (this.game.debug){
     ctx.fillStyle = "blue";
     ctx.fillRect(this.position.x, this.position.y, TILE_SIZE, TILE_SIZE);
     ctx.strokeStyle = "yellow";
@@ -56,6 +57,7 @@ export class GameObject {
       TILE_SIZE,
       TILE_SIZE
     );
+  }
     ctx.drawImage(
       this.sprite.image,
       this.sprite.x * this.sprite.width,
