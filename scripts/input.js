@@ -17,7 +17,7 @@ export class Input {
         this.keyPressed(LEFT);
       } else if (e.key === "ArrowRight" || e.key.toLowerCase() === "d") {
         this.keyPressed(RIGHT);
-      } else if (e.key === "Enter" || e.key === " ") {
+      } else if (e.key === "`" || e.key === "~") {
         this.game.toggleDebug();
       }
     });
