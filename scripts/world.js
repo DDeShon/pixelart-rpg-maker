@@ -38,7 +38,7 @@ export class World {
   }
 
   drawCollisionMap(ctx) {
-    ctx.fillStyle = "rgba(255, 0, 0, 0.2)";
+    ctx.fillStyle = "rgba(255, 0, 0, 0.35)";
     for (let row = 0; row < ROWS; row++) {
       for (let col = 0; col < COLS; col++) {
         if (this.getTile(this.level1.collisionLayer, row, col) === 1) {
