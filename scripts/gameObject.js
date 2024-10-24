@@ -28,7 +28,7 @@ export class GameObject {
     let distance = Math.hypot(this.distanceToTravel.x, this.distanceToTravel.y);
 
     if (distance <= speed) {
-      // if close enough, snap to position
+      // if close enough to destination, snap to position
       this.position.x = destinationPosition.x;
       this.position.y = destinationPosition.y;
     } else {
@@ -47,17 +47,17 @@ export class GameObject {
   }
 
   draw(ctx) {
-    if (this.game.debug){
-    ctx.fillStyle = "blue";
-    ctx.fillRect(this.position.x, this.position.y, TILE_SIZE, TILE_SIZE);
-    ctx.strokeStyle = "yellow";
-    ctx.strokeRect(
-      this.destinationPosition.x,
-      this.destinationPosition.y,
-      TILE_SIZE,
-      TILE_SIZE
-    );
-  }
+    if (this.game.debug) {
+      ctx.fillStyle = "blue";
+      ctx.fillRect(this.position.x, this.position.y, TILE_SIZE, TILE_SIZE);
+      ctx.strokeStyle = "yellow";
+      ctx.strokeRect(
+        this.destinationPosition.x,
+        this.destinationPosition.y,
+        TILE_SIZE,
+        TILE_SIZE
+      );
+    }
     ctx.drawImage(
       this.sprite.image,
       this.sprite.x * this.sprite.width,
